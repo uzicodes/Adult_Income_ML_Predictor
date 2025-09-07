@@ -1,135 +1,24 @@
                                    1.load dataset
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+   Age         Workclass  Final Weight  Education  Education Number of Years  \
+0   39         State-gov         77516  Bachelors                         13   
+1   50  Self-emp-not-inc         83311  Bachelors                         13   
+2   38           Private        215646    HS-grad                          9   
+3   53           Private        234721       11th                          7   
+4   28           Private        338409  Bachelors                         13   
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+       Marital-status         Occupation   Relationship   Race     Sex  \
+0       Never-married       Adm-clerical  Not-in-family  White    Male   
+1  Married-civ-spouse    Exec-managerial        Husband  White    Male   
+2            Divorced  Handlers-cleaners  Not-in-family  White    Male   
+3  Married-civ-spouse  Handlers-cleaners        Husband  Black    Male   
+4  Married-civ-spouse     Prof-specialty           Wife  Black  Female   
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Age</th>
-      <th>Workclass</th>
-      <th>Final Weight</th>
-      <th>Education</th>
-      <th>Education Number of Years</th>
-      <th>Marital-status</th>
-      <th>Occupation</th>
-      <th>Relationship</th>
-      <th>Race</th>
-      <th>Sex</th>
-      <th>Capital-gain</th>
-      <th>Capital-loss</th>
-      <th>Hours-per-week</th>
-      <th>Native-country</th>
-      <th>target</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>39</td>
-      <td>State-gov</td>
-      <td>77516</td>
-      <td>Bachelors</td>
-      <td>13</td>
-      <td>Never-married</td>
-      <td>Adm-clerical</td>
-      <td>Not-in-family</td>
-      <td>White</td>
-      <td>Male</td>
-      <td>2174</td>
-      <td>0</td>
-      <td>40</td>
-      <td>United-States</td>
-      <td>&lt;=50K</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>50</td>
-      <td>Self-emp-not-inc</td>
-      <td>83311</td>
-      <td>Bachelors</td>
-      <td>13</td>
-      <td>Married-civ-spouse</td>
-      <td>Exec-managerial</td>
-      <td>Husband</td>
-      <td>White</td>
-      <td>Male</td>
-      <td>0</td>
-      <td>0</td>
-      <td>13</td>
-      <td>United-States</td>
-      <td>&lt;=50K</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>38</td>
-      <td>Private</td>
-      <td>215646</td>
-      <td>HS-grad</td>
-      <td>9</td>
-      <td>Divorced</td>
-      <td>Handlers-cleaners</td>
-      <td>Not-in-family</td>
-      <td>White</td>
-      <td>Male</td>
-      <td>0</td>
-      <td>0</td>
-      <td>40</td>
-      <td>United-States</td>
-      <td>&lt;=50K</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>53</td>
-      <td>Private</td>
-      <td>234721</td>
-      <td>11th</td>
-      <td>7</td>
-      <td>Married-civ-spouse</td>
-      <td>Handlers-cleaners</td>
-      <td>Husband</td>
-      <td>Black</td>
-      <td>Male</td>
-      <td>0</td>
-      <td>0</td>
-      <td>40</td>
-      <td>United-States</td>
-      <td>&lt;=50K</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>28</td>
-      <td>Private</td>
-      <td>338409</td>
-      <td>Bachelors</td>
-      <td>13</td>
-      <td>Married-civ-spouse</td>
-      <td>Prof-specialty</td>
-      <td>Wife</td>
-      <td>Black</td>
-      <td>Female</td>
-      <td>0</td>
-      <td>0</td>
-      <td>40</td>
-      <td>Cuba</td>
-      <td>&lt;=50K</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+   Capital-gain  Capital-loss  Hours-per-week Native-country target  
+0          2174             0              40  United-States  <=50K  
+1             0             0              13  United-States  <=50K  
+2             0             0              40  United-States  <=50K  
+3             0             0              40  United-States  <=50K  
+4             0             0              40           Cuba  <=50K  
 
 
 
@@ -142,160 +31,50 @@
                                             2.Dataset Description & Exploratory Data Analysis (EDA)
 
 Missing values per column:
-Age                          0
-Workclass                    0
-Final Weight                 0
-Education                    0
-Education Number of Years    0
-Marital-status               0
-Occupation                   0
-Relationship                 0
-Race                         0
-Sex                          0
-Capital-gain                 0
-Capital-loss                 0
-Hours-per-week               0
-Native-country               0
-target                       0
+Age                             0
+Workclass                    2799
+Final Weight                    0
+Education                       0
+Education Number of Years       0
+Marital-status                  0
+Occupation                   2809
+Relationship                    0
+Race                            0
+Sex                             0
+Capital-gain                    0
+Capital-loss                    0
+Hours-per-week                  0
+Native-country                857
+target                          0
 dtype: int64
       see png file output-2.png
+      see png file output-2_class_distribution.png
 
 
 
 
                                                    3.Data Preprocessing
 
-                                                   <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+            Age  Workclass  Final Weight  Education  Education Number of Years  \
+0  0.025996   2.611034     -1.061979  -0.332542                   1.136512   
+1  0.828308   1.710780     -1.007104  -0.332542                   1.136512   
+2 -0.046942  -0.089727      0.246034   0.183660                  -0.419335   
+3  1.047121  -0.089727      0.426663  -2.397350                  -1.197259   
+4 -0.776316  -0.089727      1.408530  -0.332542                   1.136512   
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+   Marital-status  Occupation  Relationship      Race      Sex  Capital-gain  \
+0        0.916138   -1.550298     -0.276685  0.392384  0.70422      0.146932   
+1       -0.410397   -0.794402     -0.900852  0.392384  0.70422     -0.144804   
+2       -1.736932   -0.290471     -0.276685  0.392384  0.70422     -0.144804   
+3       -0.410397   -0.290471     -0.900852 -1.971746  0.70422     -0.144804   
+4       -0.410397    0.717391      2.219984 -1.971746 -1.42001     -0.144804   
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Age</th>
-      <th>Workclass</th>
-      <th>Final Weight</th>
-      <th>Education</th>
-      <th>Education Number of Years</th>
-      <th>Marital-status</th>
-      <th>Occupation</th>
-      <th>Relationship</th>
-      <th>Race</th>
-      <th>Sex</th>
-      <th>Capital-gain</th>
-      <th>Capital-loss</th>
-      <th>Hours-per-week</th>
-      <th>Native-country</th>
-      <th>target</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0.025996</td>
-      <td>2.137359</td>
-      <td>-1.061979</td>
-      <td>-0.332542</td>
-      <td>1.136512</td>
-      <td>0.916138</td>
-      <td>-1.318460</td>
-      <td>-0.276685</td>
-      <td>0.392384</td>
-      <td>0.70422</td>
-      <td>0.146932</td>
-      <td>-0.217127</td>
-      <td>-0.034087</td>
-      <td>0.289462</td>
-      <td>-0.560845</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.828308</td>
-      <td>1.454401</td>
-      <td>-1.007104</td>
-      <td>-0.332542</td>
-      <td>1.136512</td>
-      <td>-0.410397</td>
-      <td>-0.609318</td>
-      <td>-0.900852</td>
-      <td>0.392384</td>
-      <td>0.70422</td>
-      <td>-0.144804</td>
-      <td>-0.217127</td>
-      <td>-2.213032</td>
-      <td>0.289462</td>
-      <td>-0.560845</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>-0.046942</td>
-      <td>0.088484</td>
-      <td>0.246034</td>
-      <td>0.183660</td>
-      <td>-0.419335</td>
-      <td>-1.736932</td>
-      <td>-0.136557</td>
-      <td>-0.276685</td>
-      <td>0.392384</td>
-      <td>0.70422</td>
-      <td>-0.144804</td>
-      <td>-0.217127</td>
-      <td>-0.034087</td>
-      <td>0.289462</td>
-      <td>-0.560845</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1.047121</td>
-      <td>0.088484</td>
-      <td>0.426663</td>
-      <td>-2.397350</td>
-      <td>-1.197259</td>
-      <td>-0.410397</td>
-      <td>-0.136557</td>
-      <td>-0.900852</td>
-      <td>-1.971746</td>
-      <td>0.70422</td>
-      <td>-0.144804</td>
-      <td>-0.217127</td>
-      <td>-0.034087</td>
-      <td>0.289462</td>
-      <td>-0.560845</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>-0.776316</td>
-      <td>0.088484</td>
-      <td>1.408530</td>
-      <td>-0.332542</td>
-      <td>1.136512</td>
-      <td>-0.410397</td>
-      <td>0.808965</td>
-      <td>2.219984</td>
-      <td>-1.971746</td>
-      <td>-1.42001</td>
-      <td>-0.144804</td>
-      <td>-0.217127</td>
-      <td>-0.034087</td>
-      <td>-4.083380</td>
-      <td>-0.560845</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+   Capital-loss  Hours-per-week  Native-country  target  
+0     -0.217127       -0.034087        0.259694       0  
+1     -0.217127       -2.213032        0.259694       0  
+2     -0.217127       -0.034087        0.259694       0  
+3     -0.217127       -0.034087        0.259694       0  
+4     -0.217127       -0.034087       -5.377402       0
 
 
                         
@@ -304,7 +83,12 @@ dtype: int64
                                                      4.Dataset Splitting
 
 
-                                                     ((34189, 14), (14653, 14), (34189,), (14653,))
+                                                   Train/Test split successful.
+Shapes:
+X_train: (34189, 14)
+X_test:  (14653, 14)
+y_train: (34189,)
+y_test:  (14653,)
 
 
 
@@ -317,59 +101,59 @@ dtype: int64
 
 
 
-                                                     Converted target to integer type for classification.
-Decision Tree Accuracy: 0.8143042380399919
-Decision Tree Classification Report:
+ Decision Tree Accuracy: 0.8182624718487682
+Classification Report:
                precision    recall  f1-score   support
 
            0       0.88      0.88      0.88     11147
-           1       0.61      0.62      0.61      3506
+           1       0.62      0.63      0.62      3506
 
-    accuracy                           0.81     14653
-   macro avg       0.74      0.75      0.75     14653
-weighted avg       0.81      0.81      0.81     14653
+    accuracy                           0.82     14653
+   macro avg       0.75      0.75      0.75     14653
+weighted avg       0.82      0.82      0.82     14653
 
-Decision Tree Weighted Average Precision: 0.8147976408273512
-Decision Tree Weighted Average Recall: 0.8143042380399919
-Decision Tree Weighted Average F1 Score: 0.8145477980338793
+Weighted Precision: 0.819547255799298
+Weighted Recall: 0.8182624718487682
+Weighted F1 Score: 0.8188830249023175
+
 
 see png file output-5_tree.png
 
 
 
-Naive Bayes Accuracy: 0.8020200641506858
-Naive Bayes Classification Report:
+Naive Bayes Accuracy: 0.8044086535180509
+Classification Report:
                precision    recall  f1-score   support
 
            0       0.82      0.95      0.88     11147
-           1       0.67      0.33      0.45      3506
+           1       0.68      0.34      0.46      3506
 
     accuracy                           0.80     14653
-   macro avg       0.75      0.64      0.66     14653
-weighted avg       0.78      0.80      0.78     14653
+   macro avg       0.75      0.65      0.67     14653
+weighted avg       0.79      0.80      0.78     14653
 
-Naive Bayes Weighted Average Precision: 0.7845068505574806
-Naive Bayes Weighted Average Recall: 0.8020200641506858
-Naive Bayes Weighted Average F1 Score: 0.7758979088695148 
+Weighted Precision: 0.7877401566867979
+Weighted Recall: 0.8044086535180509
+Weighted F1 Score: 0.7793369988758447 
 
 see png file output-5_naive.png
 
 
 
-Neural Network Accuracy: 0.8505425510134443
-Neural Network Classification Report:
+Neural Network Accuracy: 0.8512250051184058
+Classification Report:
                precision    recall  f1-score   support
 
-           0       0.89      0.91      0.90     11147
-           1       0.70      0.65      0.67      3506
+           0       0.89      0.92      0.90     11147
+           1       0.72      0.62      0.67      3506
 
     accuracy                           0.85     14653
-   macro avg       0.80      0.78      0.79     14653
+   macro avg       0.80      0.77      0.79     14653
 weighted avg       0.85      0.85      0.85     14653
 
-Neural Network Weighted Average Precision: 0.8469290757474479
-Neural Network Weighted Average Recall: 0.8505425510134443
-Neural Network Weighted Average F1 Score: 0.8483447201444761
+Weighted Precision: 0.8458827222171275
+Weighted Recall: 0.8512250051184058
+Weighted F1 Score: 0.8474525179174227
 
 see png file output-5_neural.png
 
@@ -393,30 +177,31 @@ see png file output-5_neural.png
 
 
 
-                                    Linear Regression R2 Score: 0.25655101292541926
-Linear Regression Mean Squared Error (Loss): 0.1353218691012542
+Linear Regression R2 Score: 0.25689061139396674
+Linear Regression Mean Squared Error (Loss): 0.1352600557148528
 
 
-Logistic Regression Accuracy: 0.8253599945403671
+
+Logistic Regression Accuracy: 0.8247457858459019
 Logistic Regression Classification Report:
                precision    recall  f1-score   support
 
-           0       0.85      0.94      0.89     11147
+           0       0.84      0.94      0.89     11147
            1       0.71      0.45      0.55      3506
 
-    accuracy                           0.83     14653
+    accuracy                           0.82     14653
    macro avg       0.78      0.70      0.72     14653
-weighted avg       0.81      0.83      0.81     14653
+weighted avg       0.81      0.82      0.81     14653
 
-Logistic Regression Weighted Average Precision: 0.8137898029744014
-Logistic Regression Weighted Average Recall: 0.8253599945403671
-Logistic Regression Weighted Average F1 Score: 0.8103437449805754
-
-
+Logistic Regression Weighted Average Precision: 0.8130144108621741
+Logistic Regression Weighted Average Recall: 0.8247457858459019
+Logistic Regression Weighted Average F1 Score: 0.8097836721769982
 
 
 
-seee png file model_comparision.png
+
+see png file model_comparision.png
+logistic_regression.png
 see ROC.png file 
 
 
@@ -442,7 +227,7 @@ see ROC.png file
 
 
 
-                                          see Kmean.png file 
+                                          see Kmeans.png file 
 
 
 
